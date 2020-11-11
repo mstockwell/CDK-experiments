@@ -1,8 +1,8 @@
 import boto3
 
-db_name = 'kctc_db'
-db_cluster_param = 'kctc_db_cluster_arn'
-db_secret_param = 'kctc_db_secret_arn'
+db_name = 'event_db'
+db_cluster_param = 'event_db_cluster_arn'
+db_secret_param = 'event_db_secret_arn'
 
 ssm_client = boto3.client('ssm')
 cluster_arn = ssm_client.get_parameter(Name=db_cluster_param)
